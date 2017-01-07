@@ -7,4 +7,7 @@
 To Run:
 - “npm install”
 - "npm start"
-- "webpack -w" to watch for changes
+
+For Development Run:
+- "webpack -w"
+- in another tab: "nodemon server/server.js"

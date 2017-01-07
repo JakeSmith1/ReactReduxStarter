@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import Navbar from './Navbar';
 import Footer from './Footer';
 
-import style from './../styles/style.scss';
+import style from '../styles/style.scss';
 
 
 export default class App extends Component {
