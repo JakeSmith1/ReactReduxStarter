@@ -7,11 +7,11 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import promise from 'redux-promise'
 
 import routes from './routes';
-// import reducers from './reducers'
+import reducers from './reducers/reducers.js'
 
 const store = createStore(
     combineReducers({
-        // reducers,
+        reducers,
         routing: routerReducer
     }),window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
     applyMiddleware(promise)
