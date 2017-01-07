@@ -1,0 +1,36 @@
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+@import 'mixins/mixins';
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+// Config modules
+@import 'modules/clearfix';
+@import 'modules/defaults';
+@import 'modules/normalize';
+@import 'modules/variables';
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+@import 'partials/main';
+@import 'partials/footer';
+
+body {
+  background-color: $grey;
+  .welcome-title {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .instruction {
+    text-align: center;
+  }
+  .app {
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+  }
+}
