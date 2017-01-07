@@ -1,0 +1,26 @@
+{
+  "name": "react-redux-starter",
+  "version": "1.0.0",
+  "description": "starter application with react, redux, node, and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeSmith1/ReactReduxStarter.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack",
+    "node",
+    "express"
+  ],
+  "author": "Jake Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakeSmith1/ReactReduxStarter/issues"
+  },
+  "homepage": "https://github.com/JakeSmith1/ReactReduxStarter#readme"
+}
