@@ -10,17 +10,16 @@ class Lists extends React.Component {
   }
   render() {
     return (
-      <Grid>
-        <Row>
-          <Col>
-            {this.props.list.map((item)=> {
-              return (
-                <div><h2>List Item</h2><p>item.content</p></div>
-              )
-            })}
-          </Col>
-        </Row>
-      </Grid>
+      <div>
+        {this.props.list.map((item, i)=> {
+          return (
+            <div key={i} className={'important-' + item.important}>
+              <h2>{item.name}</h2>
+              <p>{item.content}</p>
+            </div>
+          )
+        })}
+     </div>
     )
   }
 }
@@ -28,8 +27,8 @@ class Lists extends React.Component {
 //move these into list component, then makes this a function that recieves the data in props
 function mapStateToProps(state) {
     return {
-      list: state.reducers.list
+      list: state.reducers.list.data
     }
 }
 
-export default connect(mapStateToProps)(lists);
+export default connect(mapStateToProps)(Lists);

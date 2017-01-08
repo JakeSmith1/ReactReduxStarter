@@ -1,9 +1,9 @@
 import { ADD_TO_LIST } from '../constants/ActionTypes';
 
-export function list_reducer(state = { list: [] }, action) {
+export function list_reducer(state = { data: [] }, action) {
   switch (action.type) {
     case ADD_TO_LIST:
-      return Object.assign({}, state, {list: [...state.list, action.data]});
+      return Object.assign({}, state, {data: [...state.data, action.data]});
     default:
       return state;
   }

@@ -23,6 +23,7 @@ class CreateList extends React.Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleImportantChange = this.handleImportantChange.bind(this);
     this.handleListItemChange = this.handleListItemChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       date: new Date().toISOString(),
@@ -45,7 +46,7 @@ class CreateList extends React.Component {
   //All the props from the submit form
   handleSubmit(e) {
     e.preventDefault();
-    addToList({
+    this.props.addToList({
       name: this.state.name,
       important: this.state.important,
       content: this.state.content
@@ -61,6 +62,10 @@ class CreateList extends React.Component {
     this.setState({content: e.currentTarget.value});
   }
 
+  handleImportantChange(e) {
+    this.setState({important: e.currentTarget.value});
+  }
+
   render() {
     return (
       <div className="list-form">
@@ -71,8 +76,8 @@ class CreateList extends React.Component {
             <FormControl
               value={this.state.name}
               onChange={this.handleNameChange}
-              componentClass="textarea"
-              placeholder="What is the name of your event?"
+              componentClass="input"
+              placeholder="What is the name of your List Item"
               required='true'/>
             </FormGroup>
 
@@ -83,7 +88,7 @@ class CreateList extends React.Component {
                 value={this.state.content}
                 onChange={this.handleListItemChange}
                 componentClass="textarea"
-                placeholder="Where will the event be held?"
+                placeholder="What is the content of your list"
                 required='true'/>
               </FormGroup>
 
@@ -109,7 +114,6 @@ class CreateList extends React.Component {
     )
   }
 }
-
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({addToList}, dispatch);

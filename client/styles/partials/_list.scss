@@ -1,0 +1,22 @@
+.list {
+  div {
+    p {
+      text-align: center;
+    }
+  }
+  .important-yes {
+    background-color: $grey;
+    color: $blue;
+    @include itemborder($blue);
+    margin:4px;
+  }
+  .important-no {
+    background-color: $grey;
+    color: $white;
+    @include itemborder($white);
+    margin:4px;
+  }
+  h2 {
+    @include section_title($black);
+  }
+}

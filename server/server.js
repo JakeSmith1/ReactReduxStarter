@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 //serve static files
 app.use(express.static(__dirname + '/../client'));
-app.use('scripts', express.static(__dirname + '/../node_modules'));
+app.use(express.static(__dirname + '/../node_modules'));
 app.get('*', function(req, res){
   res.sendFile(path.resolve(__dirname, '../client', 'index.html'))
 });

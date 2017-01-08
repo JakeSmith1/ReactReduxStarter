@@ -16,6 +16,11 @@
     border-radius: $card-radius;
     font-size: 25px;
 }
+@mixin itemborder($color) {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: $color;  
+}
 
 @mixin three-d-button($color) {
     color: $white;
